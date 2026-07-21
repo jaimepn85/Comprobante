@@ -1,0 +1,285 @@
+/* ==========================================
+   NEXOTECH - NOTA DE VENTA
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#ececec;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#222;
+    padding:30px;
+
+}
+
+.page{
+
+    width:210mm;
+    min-height:297mm;
+
+    background:#FFF;
+
+    margin:auto;
+
+    padding:35px;
+
+    box-shadow:0 0 20px rgba(0,0,0,.15);
+
+}
+
+header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+border-bottom:4px solid #0058b7;
+
+padding-bottom:20px;
+
+margin-bottom:25px;
+
+}
+
+.logo img{
+
+width:230px;
+
+}
+
+.empresa{
+
+text-align:right;
+
+}
+
+.empresa h1{
+
+font-size:34px;
+
+color:#111;
+
+margin-bottom:8px;
+
+}
+
+.empresa p{
+
+margin:5px 0;
+
+font-size:15px;
+
+}
+
+section{
+
+margin-top:25px;
+
+}
+
+section h2{
+
+background:#0058b7;
+
+color:white;
+
+padding:10px;
+
+font-size:18px;
+
+margin-bottom:15px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+}
+
+label{
+
+display:block;
+
+font-weight:bold;
+
+margin-bottom:6px;
+
+}
+
+input{
+
+width:100%;
+
+padding:10px;
+
+border:1px solid #CCC;
+
+border-radius:4px;
+
+font-size:15px;
+
+}
+
+textarea{
+
+width:100%;
+
+padding:12px;
+
+border:1px solid #CCC;
+
+border-radius:4px;
+
+resize:none;
+
+font-size:15px;
+
+line-height:24px;
+
+}
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+table th{
+
+background:#1d1d1d;
+
+color:white;
+
+padding:12px;
+
+font-size:15px;
+
+}
+
+table td{
+
+padding:11px;
+
+border:1px solid #DDD;
+
+font-size:14px;
+
+}
+
+tbody tr:nth-child(even){
+
+background:#f8f8f8;
+
+}
+
+tbody td{
+
+min-height:40px;
+
+}
+
+tbody td:focus{
+
+background:#ffffd9;
+
+outline:none;
+
+}
+
+.totales{
+
+display:flex;
+
+justify-content:flex-end;
+
+}
+
+.totales table{
+
+width:360px;
+
+}
+
+.totales td{
+
+padding:14px;
+
+font-size:16px;
+
+}
+
+.totales tr:last-child{
+
+background:#0058b7;
+
+color:white;
+
+font-weight:bold;
+
+}
+
+footer{
+
+margin-top:90px;
+
+display:flex;
+
+justify-content:space-between;
+
+text-align:center;
+
+font-size:15px;
+
+}
+
+footer div{
+
+width:280px;
+
+}
+
+@media print{
+
+body{
+
+background:white;
+
+padding:0;
+
+}
+
+.page{
+
+box-shadow:none;
+
+margin:0;
+
+width:100%;
+
+padding:15mm;
+
+}
+
+}
+
+@page{
+
+size:A4;
+
+margin:12mm;
+
+}
