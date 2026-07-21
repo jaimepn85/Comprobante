@@ -2,128 +2,165 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nota de Venta | NexoTech</title>
 
-<link rel="stylesheet" href="styles.css">
+<!-- Tipografía e Íconos -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<!-- Hoja de estilos -->
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
 <div class="page">
+    
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="NexoTech Logo">
+        </div>
+        <div class="header-info">
+            <h1 class="title-ribbon">NOTA DE VENTA</h1>
+            <div class="info-list">
+                <p><i class="fa-solid fa-file-invoice"></i> <b>FOLIO:</b> <span id="folio"></span></p>
+                <p><i class="fa-regular fa-calendar"></i> <b>FECHA DE EMISIÓN:</b> <span id="fecha"></span></p>
+                <p><i class="fa-solid fa-location-dot"></i> <b>LUGAR:</b> Morelia, Michoacán</p>
+            </div>
+        </div>
+    </header>
 
-<header>
+    <!-- SECCIÓN SUPERIOR: CLIENTE Y SERVICIO -->
+    <div class="top-section">
+        <div class="client-info">
+            <h2 class="section-title"><i class="fa-solid fa-user"></i> DATOS DEL CLIENTE</h2>
+            <div class="client-fields">
+                <div class="field-line"><span>NOMBRE:</span><input type="text"></div>
+                <div class="field-line"><span>TELÉFONO:</span><input type="text"></div>
+                <div class="field-line"><span>DIRECCIÓN:</span><input type="text"></div>
+            </div>
+        </div>
+        <div class="service-info">
+            <h2 class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> SERVICIO</h2>
+            <div class="service-box">
+                <textarea rows="3">Instalación de cámaras de seguridad&#10;(3 unidades).</textarea>
+            </div>
+        </div>
+    </div>
 
-<div class="logo">
+    <!-- MATERIALES -->
+    <div class="materials-section">
+        <h2 class="section-title"><i class="fa-solid fa-cube"></i> MATERIALES INCLUIDOS</h2>
+        <table class="materials-table">
+            <thead>
+                <tr>
+                    <th>CANTIDAD</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>PRESENTACIÓN</th>
+                </tr>
+            </thead>
+            <tbody id="productos">
+                <tr>
+                    <td contenteditable>3</td>
+                    <td contenteditable>Cámaras de Seguridad Wifi 12mp Doble Lente</td>
+                    <td contenteditable>3 unidades</td>
+                </tr>
+                <tr>
+                    <td contenteditable>2</td>
+                    <td contenteditable>Tarjetas de Memoria Micro SDHC 16 GB</td>
+                    <td contenteditable>2 paquetes de 2 unidades</td>
+                </tr>
+                <tr>
+                    <td contenteditable>1</td>
+                    <td contenteditable>Cajas Estancas IP65 100x100x70mm ABS</td>
+                    <td contenteditable>1 paquete</td>
+                </tr>
+                <tr>
+                    <td contenteditable>1</td>
+                    <td contenteditable>Adaptador Cubo Cargador de Pared USB</td>
+                    <td contenteditable>1 set de 5 piezas</td>
+                </tr>
+                <tr>
+                    <td contenteditable>1</td>
+                    <td contenteditable>Cable Pot Duplex Calibre 16 50mts Blanco</td>
+                    <td contenteditable>1 rollo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-<img src="logo.png">
+    <!-- SECCIÓN INFERIOR -->
+    <div class="bottom-section">
+        <div class="bottom-left">
+            <h2 class="section-title"><i class="fa-solid fa-gear"></i> MATERIALES MISCELÁNEOS DE INSTALACIÓN</h2>
+            <div class="misc-box" contenteditable>
+                Taquetes, pijas, cinta de aislar y grapas para cable.
+            </div>
+            
+            <h2 class="section-title" style="margin-top:20px;"><i class="fa-solid fa-shield-halved"></i> SERVICIOS ADICIONALES INCLUIDOS</h2>
+            <ul class="additional-services" contenteditable>
+                <li>Configuración de la aplicación móvil para visualización remota de las cámaras.</li>
+                <li>Garantía de mano de obra por instalación (6 meses).</li>
+            </ul>
 
+            <h2 class="section-title"><i class="fa-solid fa-user-tie"></i> ATENDIDO POR</h2>
+            <p class="atendido">Ing. Jaime Pérez Núñez</p>
+        </div>
+        
+        <div class="bottom-right">
+            <table class="summary-table">
+                <thead>
+                    <tr><th colspan="2">RESUMEN DE PAGO</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>COSTO TOTAL:</td>
+                        <td class="amount" contenteditable>$5,500.00</td>
+                    </tr>
+                    <tr>
+                        <td>ANTICIPO (50%):</td>
+                        <td class="amount" contenteditable>$2,750.00</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><b>SALDO PENDIENTE:</b></td>
+                        <td class="amount" contenteditable><b>$2,750.00</b></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="notes-box">
+                <h3><i class="fa-solid fa-circle-info"></i> NOTAS</h3>
+                <p contenteditable>El saldo pendiente deberá cubrirse al finalizar la instalación.<br>Agradecemos su confianza en NexoTech.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIRMAS -->
+    <div class="thanks-divider">
+        <span>¡Gracias por su preferencia!</span>
+    </div>
+    
+    <div class="signatures">
+        <div class="sig-box">
+            <div class="line"></div>
+            <p><b>FIRMA DEL CLIENTE</b><br>Nombre y firma</p>
+        </div>
+        <div class="sig-box">
+            <div class="line"></div>
+            <p><b>FIRMA DEL RESPONSABLE</b><br>Ing. Jaime Pérez Núñez</p>
+        </div>
+    </div>
+    
+    <!-- BANNER INFERIOR -->
+    <div class="footer-banner">
+        <span><i class="fa-solid fa-phone"></i> 443 179 8504</span>
+        <span><i class="fa-solid fa-envelope"></i> jaimepn85@gmail.com</span>
+        <span><i class="fa-solid fa-location-dot"></i> Morelia, Michoacán</span>
+        <span><i class="fa-solid fa-globe"></i> NexoTech</span>
+    </div>
 </div>
 
-<div class="empresa">
-
-<h1>NOTA DE VENTA</h1>
-
-<p><b>Folio:</b> <span id="folio"></span></p>
-
-<p><b>Fecha:</b> <span id="fecha"></span></p>
-
-<p><b>Lugar:</b> Morelia, Michoacán</p>
-
-<p><b>Teléfono:</b> 4431798504</p>
-
-<p><b>Correo:</b> jaimepn85@gmail.com</p>
-
-</div>
-
-</header>
-
-<section class="cliente">
-
-<h2>DATOS DEL CLIENTE</h2>
-
-<div class="grid">
-
-<div>
-
-<label>Nombre</label>
-
-<input>
-
-</div>
-
-<div>
-
-<label>Teléfono</label>
-
-<input>
-
-</div>
-
-<div>
-
-<label>Dirección</label>
-
-<input>
-
-</div>
-
-<div>
-
-<label>Correo</label>
-
-<input>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>SERVICIO</h2>
-
-<textarea rows="3">
-
-Instalación de cámaras de seguridad (3 unidades).
-
-</textarea>
-
-</section>
-
-<section>
-
-<h2>MATERIALES</h2>
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>Cantidad</th>
-
-<th>Descripción</th>
-
-</tr>
-
-</thead>
-
-<tbody id="productos">
-
-<tr>
-
-<td contenteditable>3</td>
-
-<td contenteditable>Cámara Wifi 12MP Doble Lente</td>
-
-</tr>
-
-<tr>
-
-<td contenteditable>3</td>
-
-<td contenteditable>Tarjeta Micro SD 16GB</td>
+<script src="app.js"></script>
+</body>
+</html>
