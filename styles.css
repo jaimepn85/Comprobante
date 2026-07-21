@@ -16,7 +16,7 @@ body {
     background: white;
     width: 21.59cm;
     min-height: 27.94cm;
-    padding: 40px;
+    padding: 30px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
@@ -27,81 +27,81 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 3px solid #0056b3;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .logo img {
-    max-width: 200px;
+    max-width: 180px;
 }
 
 .empresa {
     text-align: right;
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 12px;
+    line-height: 1.4;
 }
 
 .empresa h1 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
 h2 {
     background-color: #0056b3;
     color: white;
-    padding: 8px 12px;
-    font-size: 15px;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    padding: 6px 10px;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 10px;
 }
 
 .grid label {
     display: block;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .grid input {
     width: 100%;
-    padding: 8px;
+    padding: 6px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: none;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 table th {
     background-color: #1a1a1a;
     color: white;
-    padding: 10px;
+    padding: 8px;
     text-align: left;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 table td {
     border: 1px solid #ddd;
-    padding: 10px;
-    font-size: 13px;
+    padding: 8px;
+    font-size: 12px;
 }
 
 .totales {
@@ -113,24 +113,32 @@ footer {
     display: flex;
     justify-content: space-around;
     margin-top: auto;
-    padding-top: 40px;
+    padding-top: 20px;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
 }
 
-/* Adaptación para que se pueda leer bien en celular */
+/* Adaptación para que se lea bien en celular */
 @media screen and (max-width: 800px) {
     body { padding: 0; }
     .page { width: 100%; min-height: auto; padding: 20px; }
-    header { flex-direction: column; text-align: center; gap: 20px; }
+    header { flex-direction: column; text-align: center; gap: 15px; }
     .empresa { text-align: center; }
     .grid { grid-template-columns: 1fr; }
     .totales { width: 100%; }
 }
 
-/* Reglas para imprimir exactamente en Carta */
+/* Reglas estrictas para forzar UNA SOLA HOJA al imprimir */
 @media print {
-    @page { size: letter; margin: 1cm; }
+    @page { size: letter; margin: 0.5cm; }
     body { background: white; padding: 0; }
-    .page { width: 100%; box-shadow: none; padding: 0; }
+    .page { width: 100%; min-height: auto; box-shadow: none; padding: 0; margin: 0; }
+    
+    /* Reducción de espacios para ajustar todo el contenido */
+    header { padding-bottom: 10px; margin-bottom: 10px; }
+    h2 { margin-top: 8px; margin-bottom: 8px; padding: 4px 8px; }
+    textarea { padding: 4px; }
+    table { margin-bottom: 5px; }
+    table th, table td { padding: 5px; }
+    footer { padding-top: 10px; }
 }
