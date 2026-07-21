@@ -1,343 +1,136 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
     background-color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    padding: 20px;
 }
 
+/* Formato Hoja Tamaño Carta */
 .page {
     background: white;
-    width: 210mm;
-    min-height: 297mm;
-    position: relative;
+    width: 21.59cm;
+    min-height: 27.94cm;
     padding: 40px;
-    padding-bottom: 80px; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    overflow: hidden;
 }
 
-/* Adorno esquina superior derecha */
-.page::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    background: #0058b7;
-    clip-path: polygon(100% 0, 0 0, 100% 100%);
-}
-
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    z-index: 2;
+    border-bottom: 3px solid #0056b3;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.logo-container img {
+.logo img {
     max-width: 200px;
 }
 
-.header-info {
-    width: 50%;
-    background: white;
+.empresa {
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.6;
 }
 
-.title-ribbon {
-    font-size: 26px;
-    color: #000;
-    border-top: 4px solid #0058b7;
-    padding-top: 10px;
+.empresa h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    background-color: #0056b3;
+    color: white;
+    padding: 8px 12px;
+    font-size: 15px;
+    margin-top: 20px;
     margin-bottom: 15px;
 }
 
-.info-list p {
-    font-size: 13px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
-.info-list i {
-    color: #0058b7;
-    background: #eef4fc;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.grid label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.grid input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    margin-right: 10px;
 }
 
-.section-title {
-    font-size: 14px;
-    color: #0058b7;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.section-title i {
-    font-size: 18px;
-}
-
-.top-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.field-line {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 15px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.field-line span {
-    margin-right: 10px;
-    width: 80px;
-}
-
-.field-line input {
-    flex-grow: 1;
-    border: none;
-    border-bottom: 1px solid #777;
-    outline: none;
-    font-size: 13px;
-    padding-bottom: 3px;
-}
-
-.service-box {
-    background-color: #f0f6ff;
-    border-radius: 12px;
-    padding: 20px;
-    height: 100%;
-}
-
-.service-box textarea {
+textarea {
     width: 100%;
-    background: transparent;
-    border: none;
-    resize: none;
-    outline: none;
-    font-size: 14px;
-}
-
-.materials-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    font-size: 13px;
-}
-
-.materials-table th {
-    background-color: #000;
-    color: #fff;
     padding: 10px;
-}
-
-.materials-table td {
-    padding: 12px;
-    border-bottom: 1px dashed #ccc;
-    border-right: 1px dashed #ccc;
-}
-
-.materials-table td:last-child {
-    border-right: none;
-}
-
-.materials-table td:nth-child(2) {
-    text-align: left;
-}
-
-.bottom-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.misc-box {
-    background-color: #f0f6ff;
-    border-radius: 8px;
-    padding: 15px;
-    font-size: 12px;
-}
-
-.additional-services {
-    padding-left: 20px;
-    font-size: 12px;
-    line-height: 1.5;
-}
-
-.additional-services li {
-    margin-bottom: 8px;
-}
-
-.atendido {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
     font-size: 13px;
-    padding-left: 30px;
 }
 
-.summary-table {
+table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-.summary-table th {
-    background-color: #000;
-    color: #fff;
+table th {
+    background-color: #1a1a1a;
+    color: white;
     padding: 10px;
     text-align: left;
+    font-size: 13px;
 }
 
-.summary-table td {
-    padding: 12px;
+table td {
     border: 1px solid #ddd;
+    padding: 10px;
     font-size: 13px;
 }
 
-.summary-table td.amount {
-    text-align: right;
-    font-weight: 600;
+.totales {
+    width: 50%;
+    margin-left: auto;
 }
 
-.highlight-row {
-    color: #0058b7;
-    background-color: #f8fbff;
-}
-
-.notes-box {
-    border: 1px solid #0058b7;
-    border-radius: 8px;
-    padding: 15px;
-    background-color: #fdfdfd;
-}
-
-.notes-box h3 {
-    font-size: 13px;
-    color: #0058b7;
-    margin-bottom: 8px;
-}
-
-.notes-box p {
-    font-size: 11px;
-    line-height: 1.4;
-}
-
-.thanks-divider {
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    padding-top: 40px;
     text-align: center;
-    position: relative;
-    margin: 20px 0;
-}
-
-.thanks-divider::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    border-top: 1px solid #0058b7;
-    z-index: 1;
-}
-
-.thanks-divider span {
-    background: white;
-    padding: 0 15px;
-    position: relative;
-    z-index: 2;
     font-size: 14px;
-    color: #333;
 }
 
-.signatures {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-
-.sig-box {
-    width: 250px;
-}
-
-.sig-box .line {
-    border-bottom: 1px solid #333;
-    margin-bottom: 10px;
-}
-
-.sig-box p {
-    font-size: 12px;
-    line-height: 1.4;
-}
-
-.footer-banner {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 15px 10px;
-    font-size: 11px;
-}
-
-.footer-banner span {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-banner i {
-    color: #0058b7;
-    background: white;
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 12px;
-}
-
-/* Modo teléfono */
+/* Adaptación para que se pueda leer bien en celular */
 @media screen and (max-width: 800px) {
-    .page {
-        width: 100%;
-        padding: 20px;
-        padding-bottom: 120px;
-    }
-    .top-section, .bottom-section {
-        grid-template-columns: 1fr;
-    }
-    .footer-banner {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding-bottom: 20px;
-    }
+    body { padding: 0; }
+    .page { width: 100%; min-height: auto; padding: 20px; }
+    header { flex-direction: column; text-align: center; gap: 20px; }
+    .empresa { text-align: center; }
+    .grid { grid-template-columns: 1fr; }
+    .totales { width: 100%; }
 }
 
-/* Quitar sombra y botones al imprimir/PDF */
+/* Reglas para imprimir exactamente en Carta */
 @media print {
+    @page { size: letter; margin: 1cm; }
     body { background: white; padding: 0; }
-    .page { box-shadow: none; width: 210mm; }
-    div[style*="position: fixed"] { display: none !important; }
+    .page { width: 100%; box-shadow: none; padding: 0; }
 }
